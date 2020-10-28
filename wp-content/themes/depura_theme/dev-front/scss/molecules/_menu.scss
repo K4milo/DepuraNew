@@ -7,10 +7,6 @@
 
   &-item {
     width: 100%;
-
-    @include from(l) {
-      width: 33.3%;
-    }
   }
 
   &__brand {

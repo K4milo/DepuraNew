@@ -12,6 +12,7 @@
 // 3-ATOMS
 @import 'atoms/buttons';
 @import 'atoms/forms';
+@import 'atoms/images';
 @import 'atoms/brand';
 
 // 4-MOLECULES
@@ -21,3 +22,6 @@
 
 // 5-PAGES
 @import 'pages/home';
+
+// 6-VENDORS
+@import 'vendors/slick/slick';

@@ -1,7 +1,20 @@
 .body {
-  color: $primary;
+  color: $text-body;
   @include bodyText;
-  @include font(16px);
+  @include font(18px);
+
+  @include from(m) {
+    @include font(20px);
+  }
+
+
+  &--2 {
+    @include font(20px);
+
+    @include from(m) {
+      @include font(34px);
+    }
+  }
 
   &--md {
     @include bodyMd;
@@ -39,7 +52,121 @@
     color: $black;
   }
 
-  &--gold {
+  &--purple {
+    color: $primary;
+  }
+
+  &--green {
+    color: $secondary;
+  }
+
+  &--white {
+    color:$white;
+  }
+
+  &--gray {
+    color: $gray-text;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+}
+
+.headline {
+  color: $primary;
+  @include bodyBd;
+  @include font(24px);
+
+  @include from(l) {
+    @include font(40px);
+  }
+
+  &--1 {
+    @include font(120px);
+
+    @include from(m) {
+      @include font(150px);
+    }
+
+    @include from(l) {
+      @include font(260px);
+    }
+  }
+
+  &--2 {
+    @include font(50px);
+
+    @include from(m) {
+      @include font(80px);
+    }
+
+    @include from(l) {
+      @include font(115px);
+    }
+  }
+
+  &--3 {
+    @include font(30px);
+
+    @include from(m) {
+      @include font(40px);
+    }
+
+    @include from(l) {
+      @include font(60px);
+    }
+  }
+
+  &--4 {
+    @include font(20px);
+
+    @include from(m) {
+      @include font(30px);
+    }
+
+    @include from(l) {
+      @include font(40px);
+    }
+  }
+
+  &--md {
+    @include bodyMd;
+  }
+
+  &--secondary {
+    @include secondaryText;
+
+    &--bd {
+      @include secondaryMd;
+    }
+
+    &--bd {
+      @include secondaryBd;
+    }
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--purple {
+    color: $primary;
+  }
+
+  &--green {
     color: $secondary;
   }
 
@@ -64,37 +191,48 @@
   }
 }
 
-.headline {
+.subtitle {
   color: $primary;
-  @include bodyText;
+  @include bodyBd;
   @include font(20px);
+  text-transform: uppercase;
 
-  &--md {
-    @include bodyMd;
-  }
+  &--1 {
+    @include font(18px);
+    letter-spacing: rem(3px);
 
-  &--bd {
-    @include bodyBd;
-  }
-
-  &--secondary {
-    @include secondaryText;
-
-    &--bd {
-      @include secondaryMd;
+    @include from(m) {
+      @include font(20px);
+      letter-spacing: rem(4px);
     }
-
-    &--bd {
-      @include secondaryBd;
-    }
-  }
-
-  &--big {
-    @include font(60px);
 
     @include from(l) {
-      @include font(100px);
+      @include font(36px);
     }
+  }
+
+  &--2 {
+    @include font(16px);
+
+    @include from(m) {
+      @include font(30px);
+    }
+
+    @include from(l) {
+      @include font(40px);
+    }
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--purple {
+    color: $primary;
+  }
+
+  &--green {
+    color: $secondary;
   }
 
   &--white {
@@ -102,74 +240,22 @@
   }
 
   &--gray {
-    color: $gray-92;
-  }
-
-  &--gold {
-    color: $secondary;
-  }
-
-  &--black {
-    color: $black;
-  }
-
-  &--left {
-    text-align: left;
-  }
-
-  &--center {
-    text-align: center;
-  }
-
-  &--right {
-    text-align: right;
+    color: $gray-text;
   }
 }
 
-.eyebrow {
+.highlight {
   color: $primary;
+  @include bodyBd;
   letter-spacing: rem(2px);
-  @include secondaryText;
-  @include font(15px);
+  text-transform: uppercase;
+  @include font(20px);
+  display: inline;
+  background: $secondary;
+  box-shadow: 10px 0 0 $secondary, -10px 0 0 $secondary;
 
   @include from(l) {
     @include font(36px);
     letter-spacing: rem(3px);
-  }
-
-  &--bd {
-    @include secondaryMd;
-  }
-
-  &--bd {
-    @include secondaryBd;
-  }
-
-  &--white {
-    color:$white;
-  }
-
-  &--gray {
-    color: $gray-92;
-  }
-
-  &--gold {
-    color: $secondary;
-  }
-
-  &--black {
-    color: $black;
-  }
-
-  &--left {
-    text-align: left;
-  }
-
-  &--center {
-    text-align: center;
-  }
-
-  &--right {
-    text-align: right;
   }
 }

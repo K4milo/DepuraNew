@@ -12,11 +12,11 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=2.0">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
 </head>
 
@@ -46,13 +46,13 @@
                 <div class="main-menu">
                   <div class="main-menu-item main-menu__left">
                     <?php
-                        wp_nav_menu (
+                        wp_nav_menu(
                             array (
                               'theme_location'    => 'navbar-left',
                               'menu_class'        => 'navbar-nav--left'
                             )
                         );
-                    ?>
+                          ?>
                   </div>
                 </div>
             </div><!-- /.navbar-collapse -->
@@ -60,6 +60,3 @@
         </div><!-- /.container -->
       </nav>
     </header><!-- #masthead -->
-
-
-?>

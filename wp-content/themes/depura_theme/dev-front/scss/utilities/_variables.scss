@@ -1,13 +1,13 @@
 // Colors
 $black: #000000;
 $white: #ffffff;
-$primary: #294A4E;
-$secondary: #BAA053;
+$primary: #532c88;
+$secondary: #1ee492;
 $gray-active: #1e1e1d;
 $gray-lighter: #F0F0F0;
 $gray-text: #8898aa;
 $gray-disabled: #4d4d4d;
-$text-body: #666464;
+$text-body: #2d2d30;
 $gray-lt: #EAEAED;
 $gray-29: #292929;
 $gray-53: #5E5E5E;
@@ -21,21 +21,22 @@ $gray-df: #DFDFDF;
 
 
 // Font weights
-
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 // Breakpoints
 
 // font families
-$primary-font: 'Baskerville', sans-serif;
-$secondary-font: 'Biko', sans-serif;
+$primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'ITC Avant Garde Gothic LT', sans-serif;
+$tertiary-font: 'ITC Avant Garde Gothic LT', sans-serif;
 
 $breakpoints-min: ('s': 576px,
   'm': 768px,
   'l': 992px,
   'xl': 1470px,
 );
+
 $breakpoints-max: ('xs': map-get($breakpoints-min, 's') - 1px,
   's': map-get($breakpoints-min, 'm') - 1px,
   'm': map-get($breakpoints-min, 'l') - 1px,

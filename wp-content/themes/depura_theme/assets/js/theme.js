@@ -68,21 +68,27 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(2);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\nundefined\r\n^\r\n      File to import not found or unreadable: F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\scss\\utilities\\_fonts.scss.\r\n      in F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\scss\\theme.scss (line 2, column 1)\n    at F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\webpack\\lib\\NormalModule.js:192:19\n    at F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.callback (F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\sass-loader\\lib\\loader.js:55:13)\n    at Object.done [as callback] (F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\neo-async\\async.js:8069:18)\n    at options.error (F:\\wamp64\\www\\2020\\depura\\depura-new\\src\\wp-content\\themes\\depura_theme\\dev-front\\node_modules\\node-sass\\lib\\index.js:294:32)");
+__webpack_require__(3);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90,11 +96,11 @@ throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _jquery = __webpack_require__(5);
+var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _componentsGnCarousel = __webpack_require__(3);
+var _componentsGnCarousel = __webpack_require__(4);
 
 window.$ = window.jQuery = _jquery2['default'];
 
@@ -160,7 +166,7 @@ for (var instance in SELECTORS) {
 }
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -178,7 +184,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-__webpack_require__(4);
+__webpack_require__(5);
 
 var GnCarousel = (function () {
   function GnCarousel(element, slickOptions, parent) {
@@ -359,7 +365,7 @@ var GnCarousel = (function () {
 exports.GnCarousel = GnCarousel;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -385,7 +391,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 ;(function (factory) {
     'use strict';
     if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -3121,17 +3127,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-module.exports = jQuery;
-
-/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
-module.exports = __webpack_require__(1);
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
 
 /***/ })

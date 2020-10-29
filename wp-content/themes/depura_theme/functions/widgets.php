@@ -16,17 +16,44 @@ function bst_widgets_init() {
   ) );
 
   /*
-  Footer (three widget areas)
+  Footer Left (three widget areas)
    */
   register_sidebar( array(
-    'name'            => __( 'Footer', 'bst' ),
-    'id'              => 'footer-widget-area',
-    'description'     => __( 'The footer widget area', 'bst' ),
-    'before_widget'   => '<div class="%1$s %2$s site-footer-widgets__item">',
+    'name'            => __( 'Footer Left', 'bst' ),
+    'id'              => 'footer-widget-area-left',
+    'description'     => __( 'The footer left widget area', 'bst' ),
+    'before_widget'   => '<div class="%1$s %2$s site-footer--left__item">',
     'after_widget'    => '</div>',
     'before_title'    => '<h4>',
     'after_title'     => '</h4>',
   ) );
+
+   /*
+  Footer Right (three widget areas)
+   */
+  register_sidebar( array(
+    'name'            => __( 'Footer Right', 'bst' ),
+    'id'              => 'footer-widget-area-right',
+    'description'     => __( 'The footer right widget area', 'bst' ),
+    'before_widget'   => '<div class="%1$s %2$s site-footer--right__item">',
+    'after_widget'    => '</div>',
+    'before_title'    => '<h4>',
+    'after_title'     => '</h4>',
+  ) );
+
+   /*
+  Footer Bottom (three widget areas)
+   */
+  register_sidebar( array(
+    'name'            => __( 'Footer bottom', 'bst' ),
+    'id'              => 'footer-widget-area-bottom',
+    'description'     => __( 'The footer bottom widget area', 'bst' ),
+    'before_widget'   => '<div class="%1$s %2$s site-footer--bottom__item">',
+    'after_widget'    => '</div>',
+    'before_title'    => '<h4>',
+    'after_title'     => '</h4>',
+  ) );
+
 
 }
 add_action( 'widgets_init', 'bst_widgets_init' );

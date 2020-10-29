@@ -37,6 +37,6 @@ if ($query->have_posts() ) : ?>
     ?>
     </div>
   </div>
-  </section>
+</section>
     <?php
 endif;

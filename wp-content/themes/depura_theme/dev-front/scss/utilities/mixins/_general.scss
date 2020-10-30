@@ -133,3 +133,7 @@
 		width: 100%;
 	}
 }
+
+@mixin brand-gradient {
+  @include background-gradient($primary-dark, $primary, 'horizontal')
+}

@@ -12,7 +12,7 @@
     @include font(20px);
 
     @include from(m) {
-      @include font(34px);
+      @include font(28px);
     }
   }
 
@@ -83,6 +83,10 @@
   &--italic {
     font-style: italic;
   }
+
+  &--lt {
+    @include bodyLt;
+  }
 }
 
 .headline {
@@ -139,6 +143,18 @@
 
     @include from(l) {
       @include font(40px);
+    }
+  }
+
+  &--5 {
+    @include font(16px);
+
+    @include from(m) {
+      @include font(20px);
+    }
+
+    @include from(l) {
+      @include font(30px);
     }
   }
 

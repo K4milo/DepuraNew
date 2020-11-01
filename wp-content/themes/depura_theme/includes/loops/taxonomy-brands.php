@@ -16,7 +16,7 @@ $brands = get_terms($taxonomy_reference, $args_tax_ref);
 if ($brands) : ?>
 <section class="clients">
   <div class="container">
-    <header class="clients__headline">
+    <header class="clients__headline text-center">
       <h2 class="subtitle subtitle--1">Algunos de nuestros clientes</h2>
     </header>
     <ul class="clients__list">

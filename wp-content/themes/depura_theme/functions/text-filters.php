@@ -72,6 +72,18 @@ function mceBeforeInitInsertformats( $init_array )
         'wrapper' => true,
       ),
       array(
+        'title' => 'Light 1',
+        'block' => 'span',
+        'classes' => 'body body--1 body--lt',
+        'wrapper' => true,
+      ),
+      array(
+        'title' => 'Light 2',
+        'block' => 'span',
+        'classes' => 'body body--2 body--lt',
+        'wrapper' => true,
+      ),
+      array(
         'title' => 'highlight',
         'block' => 'span',
         'classes' => 'highlight',

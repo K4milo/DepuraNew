@@ -7,7 +7,7 @@
 $hero_banner = get_field('hero_banner');
 
 if($hero_banner) : ?>
-  <div class="hero-banner hero-banner--home">
+  <section class="hero-banner hero-banner--home">
     <?php
     while( have_rows('hero_banner') ) : the_row();
 
@@ -40,6 +40,6 @@ if($hero_banner) : ?>
     </div>
         <?php
     endwhile; ?>
-  </div>
+  </section>
     <?php
 endif;

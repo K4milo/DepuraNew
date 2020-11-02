@@ -1,0 +1,36 @@
+.hero-banner {
+
+  &--home {
+    text-align: center;
+  }
+
+  &__icon-top,
+  &__icon-bottom {
+    text-align: center;
+
+    img {
+      display: inline-block;
+      max-width: rem(40px);
+
+      @include from(l) {
+        max-width: rem(70px);
+      }
+    }
+  }
+
+  &__image-bg {
+    @include bgcover;
+    min-height: 100vh;
+  }
+
+  &__video {
+    @include coverAbsolute(-1);
+  }
+
+  &__caption {
+    width: 90%;
+    max-width: rem(640px);
+    padding-top: 20vh;
+    margin: 0 auto;
+  }
+}

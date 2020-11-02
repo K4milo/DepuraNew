@@ -7,7 +7,7 @@
 $featured_cards = get_field('featured_cards');
 
 if($featured_cards) : ?>
-  <div class="featured-cards featured-cards--home">
+  <section id="homeCards" class="featured-cards featured-cards--home">
     <div class="container-fluid">
       <div class="row">
     <?php
@@ -30,15 +30,15 @@ if($featured_cards) : ?>
             <div class="featured-cards__text">
               <?php echo $featured_cards_body; ?>
             </div>
-          </div>
-          <div class="featured-cards__bottom">
-            <span class="highlight"><?php echo $featured_cards_bottom; ?></span>
+            <div class="featured-cards__bottom">
+              <span class="highlight"><?php echo $featured_cards_bottom; ?></span>
+            </div>
           </div>
         </div>
         <?php
     endwhile; ?>
       </div>
     </div>
-  </div>
+  </section>
     <?php
 endif;

@@ -1,0 +1,44 @@
+.featured-cards {
+  justify-content: center;
+
+  &__item {
+
+    &:first-child {
+
+      .featured-cards__caption {
+
+        @include from(l) {
+          margin-left: auto;
+        }
+      }
+    }
+
+    &:last-child {
+      background-color: $gray-lighter;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+  }
+
+  &__icon {
+    text-align: center;
+  }
+
+  &__caption {
+    max-width: rem(670px);
+
+    @include from(l) {
+      padding: rem(40px) rem(73px);
+    }
+
+    .subtitle,
+    .headline {
+      display: block;
+      text-align: center;
+    }
+  }
+}

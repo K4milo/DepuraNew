@@ -10,6 +10,12 @@ if($focus_tiles) : ?>
   <div class="focus-tiles focus-tiles--home">
     <div class="container">
       <div class="row">
+        <header class="text-center w-100">
+          <h3 class="d-inline-block
+            subtitle subtitle--1 subtitle--green">Nuestros enfoques</h3>
+        </header>
+      </div>
+      <div class="row">
     <?php
     while( have_rows('focus_tiles') ) : the_row();
 

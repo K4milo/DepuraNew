@@ -12,18 +12,25 @@ $args = array(
 $query = new WP_Query($args);
 
 if ($query->have_posts() ) : ?>
-<section class="projects projects--home">
+<section class="section--secondary projects projects--home">
+  <header class="section__headline">
+    <h2 class="subtitle subtitle--1 subtitle--green">
+      algunos de nuestros proyectos
+    </h2>
+  </header>
   <div class="container">
-    <div class="js-carousel--3">
+    <div class="js-carousel--3 projects--carousel">
     <?php
     while($query->have_posts()):$query->the_post();
         $terms = wp_get_post_terms(get_the_ID(), 'tipo_proyecto');
         ?>
-      <div class="project__item">
-        <figure class="project__image image-ar image-ar--11">
+      <div class="projects__item
+                  projects__item--carousel
+                  projects__item--<?php echo $terms[0]->slug; ?>">
+        <figure class="projects__image image-ar image-ar--11">
           <?php the_post_thumbnail('large')?>
         </figure>
-        <div class="project__caption">
+        <div class="projects__caption">
           <a href="<?php the_permalink(); ?>">
             <h3 class="headline headline--3 headline--white">
               <?php the_title(); ?>

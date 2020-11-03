@@ -13,6 +13,7 @@
 @import 'atoms/forms';
 @import 'atoms/images';
 @import 'atoms/brand';
+@import 'atoms/sections';
 
 // 4-MOLECULES
 @import 'molecules/header';
@@ -21,6 +22,9 @@
 @import 'molecules/hero-banner';
 @import 'molecules/featured-cards';
 @import 'molecules/focus-tiles';
+@import 'molecules/project';
+@import 'molecules/news';
+@import 'molecules/clients';
 
 // 5-PAGES
 @import 'pages/home';

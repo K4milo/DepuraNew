@@ -19,12 +19,12 @@ if ($query->have_posts() ) : ?>
     while($query->have_posts()):$query->the_post();
         $terms = wp_get_post_terms(get_the_ID(), 'tipo_proyecto');
         ?>
-      <div class="col-md-4">
-        <div class="project__item project__item--grid">
-          <figure class="project__image image-ar image-ar--11">
+      <div class="col-md-4 projects__wrapper">
+        <div class="projects__item projects__item--grid">
+          <figure class="projects__image image-ar image-ar--11">
             <?php the_post_thumbnail('large')?>
           </figure>
-          <div class="project__caption">
+          <div class="projects__caption">
             <a href="<?php the_permalink(); ?>">
               <h3 class="headline headline--3 headline--white">
                 <?php the_title(); ?>

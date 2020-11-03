@@ -14,9 +14,9 @@ $args_tax_ref = array (
 $brands = get_terms($taxonomy_reference, $args_tax_ref);
 
 if ($brands) : ?>
-<section class="clients">
+<section class="section--secondary clients">
   <div class="container">
-    <header class="clients__headline text-center">
+    <header class="section__headline text-center">
       <h2 class="subtitle subtitle--1">Algunos de nuestros clientes</h2>
     </header>
     <ul class="clients__list">
@@ -30,7 +30,7 @@ if ($brands) : ?>
             <?php
         endforeach; ?>
     </ul>
-    <div class="class__bottom">
+    <div class="clients__bottom">
       <p class="body body--2 body--bd">y más de 40 empresas más.</p>
     </div>
   </div>

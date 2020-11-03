@@ -1,0 +1,120 @@
+.projects {
+
+  &--carousel {
+    margin: 0 rem(-10px);
+
+    .slick-slide {
+
+      .projects__image {
+
+        &::after {
+          background-color: $secondary;
+        }
+      }
+
+      &:nth-child(2n) {
+
+        .projects__image {
+
+          &::after {
+            background-color: $yellow;
+          }
+        }
+      }
+
+      &:nth-child(3n) {
+
+        .projects__image {
+
+          &::after {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &--home {
+    padding-bottom: rem(30px);
+
+    @include from(l) {
+      padding-bottom: rem(60px);
+    }
+  }
+
+  &__wrapper {
+    .projects__image {
+
+      &::after {
+        background-color: $secondary;
+      }
+    }
+
+    &:nth-child(2n) {
+
+      .projects__image {
+
+        &::after {
+          background-color: $yellow;
+        }
+      }
+    }
+
+    &:nth-child(3n) {
+
+      .projects__image {
+
+        &::after {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+
+    &--carousel {
+
+      &:hover {
+
+        .projects__image {
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .projects__image {
+        margin: 0 rem(10px);
+      }
+    }
+  }
+
+  &__image {
+
+    &::after {
+      content: '';
+      display: block;
+      @include coverAbsolute(1);
+      transition: all .3s;
+      opacity: .6;
+    }
+  }
+
+  &__caption {
+    @include coverAbsolute(2);
+
+    a {
+      display: block;
+      text-align: center;
+      @include center('both');
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

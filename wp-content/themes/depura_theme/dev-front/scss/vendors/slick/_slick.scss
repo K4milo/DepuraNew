@@ -105,9 +105,9 @@
 /* Slider */
 
 .slick-list {
-    .slick-loading & {
-        background: #fff center center no-repeat;
-    }
+  .slick-loading & {
+    background: #fff center center no-repeat;
+  }
 }
 
 /* Arrows */
@@ -121,7 +121,6 @@
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
-  background-color: $primary;
   color: transparent;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -130,30 +129,25 @@
   padding: 0;
   border: none;
   outline: none;
+  z-index: 2;
 }
 
 .slick-prev {
-    left: -25px;
-    [dir="rtl"] & {
-        left: auto;
-        right: -25px;
-    }
-    &:before {
-        [dir="rtl"] & {
-        }
-    }
+  left: 0;
+  @include iconBg('../images/icons/prev.svg');
+
+  @include from(l) {
+    left: -35px;
+  }
 }
 
 .slick-next {
-    right: -25px;
-    [dir="rtl"] & {
-        left: -25px;
-        right: auto;
-    }
-    &:before {
-        [dir="rtl"] & {
-        }
-    }
+  right: 0;
+  @include iconBg('../images/icons/next.svg');
+
+  @include from(l) {
+    right: -35px;
+  }
 }
 
 /* Dots */

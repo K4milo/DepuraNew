@@ -10,7 +10,7 @@ if($focus_tiles) : ?>
   <div class="focus-tiles focus-tiles--home">
     <div class="container">
       <div class="row">
-        <header class="text-center w-100">
+        <header class="section__headline">
           <h3 class="d-inline-block
             subtitle subtitle--1 subtitle--green">Nuestros enfoques</h3>
         </header>

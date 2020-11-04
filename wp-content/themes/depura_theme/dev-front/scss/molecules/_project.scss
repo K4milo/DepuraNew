@@ -34,11 +34,31 @@
     }
   }
 
+  &--slider {
+    padding: 0 rem(30px);
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
+    }
+  }
+
   &--home {
     padding-bottom: rem(30px);
 
     @include from(l) {
       padding-bottom: rem(60px);
+    }
+  }
+
+  &--grid {
+    padding: rem(30px) 0;
+
+    @include from(l) {
+      padding: rem(60px) 0;
     }
   }
 

@@ -33,4 +33,28 @@
     padding-top: 20vh;
     margin: 0 auto;
   }
+
+  &--dark {
+    @include brand-gradient;
+    padding-bottom: rem(20px);
+    text-align: center;
+
+    @include from(l) {
+      padding-bottom: rem(50px);
+    }
+
+  }
+
+  &__thumbnail {
+    padding-top: rem(200px);
+
+    @include from(l) {
+      padding-top: rem(300px);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }

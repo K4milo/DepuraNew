@@ -23,7 +23,7 @@ if ($charges) : ?>
             $image = get_field('taxonomy_image', $taxonomy_reference . '_' . $charge->term_id);
             ?>
       <div class="col-md-4">
-        <div class class="charges__item">
+        <div class="charges__item">
           <figure class="charges__image image-ar image-ar--11">
             <img src="<?php echo $image['url']; ?>"
                   alt="imagen de fondo para <?php echo $charge->name; ?>"/>

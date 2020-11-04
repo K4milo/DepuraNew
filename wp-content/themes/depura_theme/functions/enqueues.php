@@ -17,6 +17,7 @@ function Depura_Child_assets()
 
     // Scripts
     wp_enqueue_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', false, null, true);
+    wp_enqueue_script('lottie-js', '//unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js', false, null, true);
     wp_enqueue_script('theme-scripts', get_stylesheet_directory_uri().'/assets/js/theme.js', false, null, true);
 }
 

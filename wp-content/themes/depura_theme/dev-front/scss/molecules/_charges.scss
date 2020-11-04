@@ -1,0 +1,30 @@
+.charges {
+
+  &__list {
+    margin-top: rem(20px);
+    margin-bottom: rem(20px);
+
+    @include from(l) {
+      margin-top: rem(50px);
+      margin-bottom: rem(50px);
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__caption {
+    @include coverAbsolute(2);
+
+    a {
+      display: block;
+      text-align: center;
+      @include center('both');
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

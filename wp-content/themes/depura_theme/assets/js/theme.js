@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -80,6 +80,10 @@ module.exports = jQuery;
 
 
 __webpack_require__(3);
+
+__webpack_require__(4);
+
+__webpack_require__(5);
 
 /***/ }),
 /* 2 */
@@ -100,7 +104,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _componentsGnCarousel = __webpack_require__(4);
+var _componentsGnCarousel = __webpack_require__(6);
 
 window.$ = window.jQuery = _jquery2['default'];
 
@@ -172,6 +176,74 @@ for (var instance in SELECTORS) {
 "use strict";
 
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
+
+var _componentsNav_menu = __webpack_require__(7);
+
+var SELECTORS = {
+  menu: '.js-menu'
+};
+
+var instance = [].concat(_toConsumableArray(document.querySelectorAll(SELECTORS.menu)));
+
+if (instance.length) {
+  var menuInstance = new _componentsNav_menu.Navbar(instance[0]);
+  menuInstance.init();
+}
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
+
+var malarkey = __webpack_require__(8);
+var elementsHero = [].concat(_toConsumableArray(document.querySelectorAll('.typewriter--hero')));
+var elements = [].concat(_toConsumableArray(document.querySelectorAll('.typewriter')));
+var optionsHero = {
+  typeSpeed: 200,
+  deleteSpeed: 50,
+  pauseDuration: 2000,
+  repeat: false
+};
+
+var options = {
+  typeSpeed: 40,
+  deleteSpeed: 50,
+  pauseDuration: 2000,
+  repeat: false
+};
+
+elementsHero.forEach(function (el) {
+  var typeText = el.textContent;
+  var callback = function callback(text) {
+    el.textContent = text;
+  };
+
+  malarkey(callback, optionsHero).type(typeText) // type
+  .pause(); // pause
+});
+
+elements.forEach(function (el) {
+  var typeText = el.textContent;
+  var callback = function callback(text) {
+    el.textContent = text;
+  };
+
+  malarkey(callback, options).type(typeText) // type
+  .pause(); // pause
+});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
@@ -184,7 +256,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-__webpack_require__(5);
+__webpack_require__(9);
 
 var GnCarousel = (function () {
   function GnCarousel(element, slickOptions, parent) {
@@ -365,7 +437,228 @@ var GnCarousel = (function () {
 exports.GnCarousel = GnCarousel;
 
 /***/ }),
-/* 5 */
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var CLASSES = {
+  animIn: 'slide-down',
+  animOut: 'slide-up',
+  activeMenu: 'navbar--sticky',
+  openMenu: 'navbar--open'
+};
+
+var SELECTORS = {
+  toggler: '.js-menu-toggler'
+};
+
+var Navbar = (function () {
+  function Navbar(context) {
+    _classCallCheck(this, Navbar);
+
+    this.context = context;
+    this.toggler = null;
+    this.visible = true;
+    this.bannerHeight = context.clientHeight;
+    this.offset = 0;
+    this.refoffset = 0;
+  }
+
+  _createClass(Navbar, [{
+    key: 'init',
+    value: function init() {
+      this.toggler = this.context.querySelector(SELECTORS.toggler);
+      this.subscribe();
+    }
+  }, {
+    key: 'subscribe',
+    value: function subscribe() {
+      var _this = this;
+
+      window.addEventListener('scroll', function () {
+        _this.handleScroll();
+      });
+
+      this.toggler.addEventListener('click', function () {
+        _this.handleToggle(_this.context);
+      });
+    }
+  }, {
+    key: 'handleScroll',
+    value: function handleScroll() {
+      this.offset = window.scrollY;
+
+      if (this.offset > this.bannerHeight) {
+        // Menu out of view
+        if (this.offset >= this.refoffset) {
+          this.context.classList.remove(CLASSES.animIn);
+          this.context.classList.remove(CLASSES.activeMenu);
+          this.context.classList.add(CLASSES.animOut);
+        } else if (this.offset < this.refoffset) {
+          this.context.classList.remove(CLASSES.animOut);
+          this.context.classList.add(CLASSES.animIn);
+          this.context.classList.add(CLASSES.activeMenu);
+        }
+
+        this.refoffset = this.offset;
+      } else {
+        this.context.classList.remove(CLASSES.activeMenu);
+      }
+    }
+  }, {
+    key: 'handleToggle',
+    value: function handleToggle(wrapper) {
+      wrapper.classList.toggle(CLASSES.openMenu);
+    }
+  }]);
+
+  return Navbar;
+})();
+
+exports.Navbar = Navbar;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var DELETE_ALL_SENTINEL = -1;
+
+function noop() {}
+
+function malarkey(callback, options) {
+  options = options || {};
+
+  var text = '';
+
+  var functionQueue = [];
+  var functionArguments = [];
+  var functionIndex = -1;
+
+  var _isStopped = true;
+  var stoppedCallback = noop;
+
+  var methods = {
+    call: function call(fn) {
+      return enqueue(_call, [fn]);
+    },
+    clear: function clear() {
+      return enqueue(_clear, null);
+    },
+    'delete': function _delete(characterCount, deleteOptions) {
+      if (typeof characterCount === 'object') {
+        deleteOptions = characterCount;
+        characterCount = DELETE_ALL_SENTINEL;
+      }
+      return enqueue(_delete2, [characterCount || DELETE_ALL_SENTINEL, (deleteOptions ? deleteOptions.speed : options.deleteSpeed) || 50]);
+    },
+    isStopped: function isStopped() {
+      return _isStopped;
+    },
+    pause: function pause(pauseOptions) {
+      return enqueue(setTimeout, [(pauseOptions ? pauseOptions.duration : options.pauseDuration) || 2000]);
+    },
+    triggerResume: function triggerResume() {
+      if (_isStopped) {
+        _isStopped = false;
+        next();
+      }
+      return methods;
+    },
+    triggerStop: function triggerStop(fn) {
+      _isStopped = true;
+      stoppedCallback = fn || noop;
+      return methods;
+    },
+    type: function type(text, typeOptions) {
+      return enqueue(_type, [text, (typeOptions ? typeOptions.speed : options.typeSpeed) || 50]);
+    }
+  };
+
+  function next() {
+    if (_isStopped) {
+      stoppedCallback(text);
+      stoppedCallback = noop;
+      return;
+    }
+    functionIndex += 1;
+    if (functionIndex === functionQueue.length) {
+      if (!options.repeat) {
+        functionIndex = functionQueue.length - 1;
+        _isStopped = true;
+        return;
+      }
+      functionIndex = 0;
+    }
+    functionQueue[functionIndex].apply(null, [next].concat(functionArguments[functionIndex]));
+  }
+
+  function enqueue(callback, args) {
+    functionQueue.push(callback);
+    functionArguments.push(args);
+    if (_isStopped) {
+      _isStopped = false;
+      setTimeout(next, 0);
+    }
+    return methods;
+  }
+
+  function _type(next, typeText, typeSpeed) {
+    var length = typeText.length;
+    var i = 0;
+    setTimeout(function typeCharacter() {
+      text += typeText[i++];
+      callback(text);
+      if (i === length) {
+        next();
+        return;
+      }
+      setTimeout(typeCharacter, typeSpeed);
+    }, typeSpeed);
+  }
+
+  function _delete2(next, characterCount, deleteSpeed) {
+    var finalLength = characterCount === DELETE_ALL_SENTINEL ? 0 : text.length - characterCount;
+    setTimeout(function deleteCharacter() {
+      text = text.substring(0, text.length - 1);
+      callback(text);
+      if (text.length === finalLength) {
+        next();
+        return;
+      }
+      setTimeout(deleteCharacter, deleteSpeed);
+    }, deleteSpeed);
+  }
+
+  function _clear(next) {
+    text = '';
+    callback(text);
+    next();
+  }
+
+  function _call(next, fn) {
+    fn(next, text);
+  }
+
+  return methods;
+}
+
+module.exports = malarkey;
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3127,7 +3420,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 6 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);

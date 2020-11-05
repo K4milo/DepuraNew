@@ -274,4 +274,18 @@
     @include font(36px);
     letter-spacing: rem(3px);
   }
+
+  &--1 {
+    @include font(16px);
+    letter-spacing: rem(3px);
+
+    @include from(m) {
+      @include font(18px);
+      letter-spacing: rem(4px);
+    }
+
+    @include from(l) {
+      @include font(26px);
+    }
+  }
 }

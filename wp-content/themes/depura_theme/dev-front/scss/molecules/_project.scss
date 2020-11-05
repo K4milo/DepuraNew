@@ -34,18 +34,6 @@
     }
   }
 
-  &--slider {
-    padding: 0 rem(30px);
-
-    .slick-prev {
-      left: 0;
-    }
-
-    .slick-next {
-      right: 0;
-    }
-  }
-
   &--home {
     padding-bottom: rem(30px);
 
@@ -55,10 +43,32 @@
   }
 
   &--grid {
-    padding: rem(30px) 0;
+    padding: rem(100px) 0 rem(30px);
 
     @include from(l) {
-      padding: rem(60px) 0;
+      padding: rem(220px) 0 rem(65px);
+    }
+  }
+
+  &__content {
+    padding-top: rem(30px);
+    padding-bottom: rem(30px);
+
+    @include from(l) {
+      padding-top: rem(200px);
+      padding-bottom: rem(60px);
+    }
+  }
+
+  &__slider {
+    padding: 0 rem(30px);
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
     }
   }
 

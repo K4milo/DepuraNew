@@ -32,8 +32,10 @@ if ($query->have_posts()) : ?>
             <?php the_post_thumbnail('full'); ?>
           </figure>
           <div class="team-members__caption">
-            <span class="highlight">"<?php the_field('member_alias') ?>"</span>
-            <h3 class="headline headline--3"><?php the_title(); ?></h3>
+            <span class="highlight highlight--1">
+              <span class="typewriter">"<?php the_field('member_alias') ?>"</span>
+            </span>
+            <h3 class="headline headline--4"><?php the_title(); ?></h3>
             <div class="body body--purple">
               <?php the_field('member_position');?>
             </div>

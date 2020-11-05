@@ -32,7 +32,7 @@ if($hero_banner) : ?>
             <img src="<?php bloginfo('template_url'); ?>/images/logo-icon.svg" alt="Icono de depura">
           </div>
           <h2 class="headline headline--1 headline--white">
-            <?php echo $hero_banner_headline; ?><span class="headline--green">.</span>
+            <span class="typewriter--hero"><?php echo $hero_banner_headline; ?></span><span class="headline--green">.</span>
           </h2>
           <div class="body body--white">
             <?php echo $hero_banner_body; ?>

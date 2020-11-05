@@ -1,17 +1,28 @@
-.brand {
-  &-image {
-    @include iconBg('../images/brand/logo.svg');
-  }
+.brand-image {
+  width: rem(25px);
+  height: rem(133px);
+  @include iconBg('../images/brand/logo.svg');
 
-  &--mobile {
-    width: rem(88px);
-    height: rem(106px);
-  }
-
-  &--desktop {
+  @include from(l) {
     margin: rem(22px) 0;
-    width: rem(140px);
-    height: rem(130px);
+    width: rem(240px);
+    height: rem(47px);
     display: inline-block;
+  }
+}
+
+.navbar--sticky {
+
+  .brand-image {
+    @include iconBg('../images/brand/logo-2.svg');
+  }
+}
+
+.page-template-template-portfolio,
+.tax-division,
+.single {
+
+  .brand-image {
+    @include iconBg('../images/brand/logo-2.svg');
   }
 }

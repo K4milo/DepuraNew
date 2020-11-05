@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="container my-5">
-  <div class="row">
+<div class="container">
+  <div class="row projects__content">
     <div class="col-md-7">
-      <div class="js-carousel--1 projects--slider">
+      <div class="js-carousel--1 projects__slider">
         <?php
         while( have_rows('project_gallery') ) : the_row();
             $image = get_sub_field('project_gallery__image');

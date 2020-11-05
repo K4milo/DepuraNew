@@ -2,6 +2,7 @@
 @import 'utilities/variables';
 @import 'utilities/mixins';
 @import 'utilities/displays';
+@import 'utilities/animations';
 
 // 2-QUARKS
 @import 'quarks/typography';
@@ -27,6 +28,7 @@
 @import 'molecules/clients';
 @import 'molecules/small-content';
 @import 'molecules/charges';
+@import 'molecules/team';
 
 // 5-PAGES
 @import 'pages/home';

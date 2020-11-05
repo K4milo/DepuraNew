@@ -9,16 +9,12 @@
     width: 100%;
   }
 
-  &__brand {
-    text-align: center;
-  }
-
   ul {
     margin: 0;
     padding: 0;
 
     @include from(l) {
-      text-align: center;
+      text-align: right;
     }
 
     li {
@@ -30,10 +26,13 @@
 
       a {
         display: block;
-        color: $secondary;
-        @include secondaryMd;
-        text-transform: uppercase;
+        color: $white;
+        @include bodyText;
         padding: rem(6px) rem(16px);
+
+        @include from(l) {
+          @include font(26px);
+        }
       }
     }
   }

@@ -31,7 +31,9 @@ if($featured_cards) : ?>
               <?php echo $featured_cards_body; ?>
             </div>
             <div class="featured-cards__bottom">
-              <span class="highlight"><?php echo $featured_cards_bottom; ?></span>
+              <span class="highlight">
+                <span class="typewriter"><?php echo $featured_cards_bottom; ?></span>
+              </span>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ if($contact_items) : ?>
         $contact_items_icon = get_sub_field('contact_items_icon');
         $contact_items_description = get_sub_field('contact_items_description');
      ?>
-
+     
         <img src="<?php echo $contact_items_icon ?>" alt="">
         <?php echo $contact_items_description ?>
         <?php

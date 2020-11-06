@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
   <div id="page" class="hfeed site">
     <header id="masthead" class="site-header py-0" role="banner">
-      <nav class="site-header__nav navbar navbar-expand-lg navbar-default px-0 js-menu">
+      <nav class="site-header__nav navbar navbar-expand-lg navbar-default js-menu">
         <div class="container-fluid">
           <div class="header w-100 row mx-auto">
               <div class="navbar-header col-auto p-0">

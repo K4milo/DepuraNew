@@ -6,6 +6,14 @@
     padding-bottom: rem(60px);
   }
 
+  &__item {
+    margin-bottom: rem(25px);
+
+    @include from(l) {
+      margin-bottom: 0;
+    }
+  }
+
   &__caption {
     padding-top: rem(20px);
 
@@ -22,9 +30,13 @@
     height: rem(150px);
 
     img {
-      max-width: 60%;
+      max-width: 40%;
       height: auto;
       @include center('both');
+
+      @include from(l) {
+        max-width: 60%;
+      }
     }
   }
 }

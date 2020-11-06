@@ -1,6 +1,6 @@
 .brand-image {
-  width: rem(25px);
-  height: rem(133px);
+  height: rem(25px);
+  width: rem(133px);
   @include iconBg('../images/brand/logo.svg');
 
   @include from(l) {
@@ -11,7 +11,8 @@
   }
 }
 
-.navbar--sticky {
+.navbar--sticky,
+.navbar--open {
 
   .brand-image {
     @include iconBg('../images/brand/logo-2.svg');

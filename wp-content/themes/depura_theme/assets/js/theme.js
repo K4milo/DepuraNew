@@ -211,7 +211,7 @@ var optionsHero = {
 };
 
 var options = {
-  typeSpeed: 40,
+  typeSpeed: 100,
   deleteSpeed: 50,
   pauseDuration: 2000,
   repeat: false

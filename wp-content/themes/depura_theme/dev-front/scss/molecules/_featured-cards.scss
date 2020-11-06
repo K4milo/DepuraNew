@@ -30,9 +30,10 @@
 
   &__caption {
     max-width: rem(670px);
+    padding: rem(30px) rem(20px);
 
     @include from(l) {
-      padding: rem(40px) rem(73px);
+      padding: rem(40px) rem(73px) rem(100px);
     }
 
     .subtitle,

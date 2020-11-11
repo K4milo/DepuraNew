@@ -32,8 +32,7 @@ $banner_animated = get_field('taxonomy_animated_banner', $term_reference . '_' .
       </div>
       <div class="col-md-6">
         <div class="hero-banner__side-text">
-          <h2 class="headline headline--3"><?php echo $term->name; ?></h2>
-          <div class="body body--2 body--lt"><?php echo $term->description; ?></div>
+          <?php the_content(); ?>
         </div>
       </div>
     </div>

@@ -3,6 +3,19 @@
   &--home {
     text-align: center;
   }
+  &--contact {
+    background: linear-gradient(90deg, rgba(38,22,73,1) 0%, rgba(58,35,108,1) 44%, rgba(38,22,73,1) 100%);
+    padding-bottom:100px;
+    text-align: center;
+    .container-fluid{
+      .hero-banner__caption{
+        h2{
+          font-size: 4rem;
+        }
+      }
+    }
+
+  }
 
   &--dark {
     @include brand-gradient;
@@ -12,7 +25,6 @@
     @include from(l) {
       padding-bottom: rem(50px);
     }
-
 
   }
 

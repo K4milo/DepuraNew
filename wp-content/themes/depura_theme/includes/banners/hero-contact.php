@@ -1,6 +1,6 @@
 
 
-  <section class="hero-banner hero-banner--home">
+  <section class="hero-banner hero-banner--contact">
 
     <div class="container-fluid">
         <div class="hero-banner__caption">

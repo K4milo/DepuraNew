@@ -1,3 +1,25 @@
+#contactCards{
+  .container-fluid{
+    .row{
+      .col-md-6{
+        .featured-icons{
+            max-width: rem(670px);
+            padding: rem(30px) rem(20px);
+
+            @include from(l) {
+              padding: rem(40px) rem(73px) rem(100px);
+            }
+            &__caption{
+              display: flex;
+              &-info{
+                padding: 20px 5px;
+              }
+            }
+        }
+      }
+    }
+  }
+}
 .featured-cards {
   justify-content: center;
 
@@ -35,7 +57,6 @@
     @include from(l) {
       padding: rem(40px) rem(73px) rem(100px);
     }
-
 
     .subtitle,
     .headline {
